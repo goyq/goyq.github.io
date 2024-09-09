@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="YAO Qi">
+    <meta name="wechat" content="qi13063215980">
+    <link rel="stylesheet" href="index.css">
+    <title>姚琪's Personal Homepage</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var nextButton = document.getElementById('nextButton');
+            var mainContent = document.getElementById('mainContent');
+
+            function showNextPage() {
+                // 隐藏第一页
+                document.querySelector('.background').style.display = 'none';
+                // 显示第二页
+                mainContent.style.display = 'flex';
+            }
+
+            // 给 Next 按钮添加点击事件监听器
+            nextButton.addEventListener('click', showNextPage);
+        });
+    </script>
+
+</head>
+<body>
+    <!-- ------------------------------------------------第一页开始---------------------------------------------------- -->
+    <div class="background">
+        <div class="content">
+            <img src="images/OIP-C.jpg" alt="Your Profile Image" class="profile-image">
+            <div class="sentence-container">
+                <p class="sentence">零碎的岛屿终会找到海.             
+                                        --琪</p>
+                <p class="sentence">心如花木，向阳而生.               
+                                        --琪</p>
+                <p class="sentence">树是另一个世界的入口.             
+                                        --琪</p>
+                <p class="sentence">你是我记忆里的永恒的减七和弦.      
+                                        --琪</p>
+            </div>
+
+            <div class="links">
+                <button id="nextButton" class="aone" >Next</button>
+                <button >    </button>
+                <a href="https://weibo.com/u/7497245327" class="aone">微博</a>
+                <button >    </button>
+                <a href="https://blog.csdn.net/qq_72242066?spm=1010.2135.3001.5343" class="aone">CSDN</a>
+                <button >    </button>
+                <a href="https://www.jianshu.com/u/1090683b9dad" class="aone">简书</a>
+                <button >    </button>
+                <a href="https://github.com/goyq" class="aone">github    </a>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------第一页结束-------------------------------------------------- -->
+
+
+    <!-- ------------------------------------------------第二页开始 ---------------------------------------------------->
+    <div id="mainContent">
+        <div id="leftModule">
+            <!-- 左侧模块的内容 -->
+            <img src="images/OIP-C.jpg" alt="Your Profile Image" class="profile-image2">
+            <div class="sentence-container2">
+                <p class="sentence2">零碎的岛屿终会找到海.             
+                    --琪</p>
+                <p class="sentence2">心如花木，向阳而生.               
+                    --琪</p>
+                <p class="sentence2">树是另一个世界的入口.             
+                    --琪</p>
+                <p class="sentence2">你是我记忆里的永恒的减七和弦.      
+                    --琪</p>
+            </div>
+            <div class="links2">
+                <div>
+                    <a href="https://weibo.com/u/7497245327" class="atwo">微博</a>
+                </div>
+                <div>
+                    <a href="https://blog.csdn.net/qq_72242066?spm=1010.2135.3001.5343" class="atwo">CSDN</a>
+                </div>
+                <div>
+                    <a href="https://www.jianshu.com/u/1090683b9dad" class="atwo">简书</a>
+                </div>
+                <div>
+                    <a href="https://github.com/goyq" class="atwo">GitHub</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="rightModule">
+            <div id="rightModuleContent">
+                <!-- 内容 -->
+                <div class="marquee-container">
+                    <div class="marquee-content">阿琪.</div>
+                </div>
+                <p class="p1">落在树梢上</p>
+                <p class="p2">  关于我</p>
+                <p class="p3">长期生活在树上--深爱树木</p>  
+                <p class="p4">坚定的唯物主义，理科生</p>  
+                <p class="p5">目前准备考研--完成当时的梦</p>  
+                <p class="p6">偶尔一个人会想，去其他国家看看</p>  
+                <p class="p7">坚定的共产主义追随者，小小共青团员</p>  
+                <p class="p8">独处--一个人走路，一个人探索世界</p> 
+
+                <p class="p9">  喜欢语录</p>
+                <p class="p10">轻轻地我走了，正如我轻轻地来，挥一挥衣袖，不带走一片云彩。</p>
+                <p class="p11">苦心人，天不负，卧薪尝胆，三千越甲可吞吴。</p>  
+                <p class="p12">后来，南山的风吹散了谷堆，北海的水淹没了墓碑。</p>  
+                <p class="p13">一个人有两个我，一个在黑暗中醒着，一个在光明中睡着。</p>  
+                <p class="p14">时光是条长长的河，在这条河里，我们游过了年少，游过了青春。</p>  
+                <p class="p15">长白山没有青铜门，西湖没有吴山居，世上没有他们。</p>  
+
+                <p class="p17">  与我交流</p>  
+                <p class="p18">邮箱:<1512853752@qq.com></p>  
+                <p class="p19">微信公众号:两颗橘子</p>  
+                <p class="p20">微博:<a href="https://weibo.com/u/7497245327">iiYQ_no</a></p>  
+                <p class="p21">知乎:<a href="https://www.zhihu.com/people/--15-34-70-7">没有玉碎，何来瓦全.</a></p>  
+                <p class="p22">简书:<a href="https://www.jianshu.com/u/1090683b9dad">零碎的岛屿终会找到海.</a></p>  
+                <p class="p23">网易云音乐:<a href="https://music.163.com/#/user/home?id=4994765100">永远向着光走.</a></p>  
+                <p class="p24">CSDN:<a href="https://blog.csdn.net/qq_72242066?spm=1010.2135.3001.5343">世界那么大，我想去看看.</a></p>  
+                <p class="p25">Github:<a href="https://github.com/goyq">人生海海，山山而川，不过尔尔.</a></p>  
+
+                <!-- 新增的嵌入视频的内嵌块 -->
+                <div class="video-container">
+                    <iframe width="800" height="450" src="//player.bilibili.com/player.html?aid=755971036&bvid=BV1D64y1Z7Ko&cid=276282458&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                    </div>
+                </div>
+                <!-- ... -->
+            </div>
+
+    <!-- ------------------------------------------------第二页结束---------------------- ------------------------------>
+</body>
+</html>

@@ -1,0 +1,615 @@
+
+/* ----------------------------------------第一主页的页面开始--------------- */
+body, html {
+    font-family: '宋体', 'Microsoft YaHei', sans-serif;
+    white-space: pre-wrap; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+
+/* -------背景的设置------- */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    animation: changeBackground 10s  ease-in-out  infinite;
+}
+@keyframes changeBackground{
+    0%{background-image: url('images/image1.jpg');}
+    21.5%{background-image: url('images/image1.jpg');}
+
+    24%{background-image: url('images/image2.jpg');}
+    45.5%{background-image: url('images/image2.jpg');}
+
+    48.5%{background-image: url('images/image3.jpg');}
+    71%{background-image: url('images/image3.jpg');}
+
+    74%{background-image: url('images/image5.jpg');}
+    95.5%{background-image: url('images/image5.jpg');}
+
+    100%{background-image: url('images/image1.jpg');}
+}
+
+
+/* ------头像的大小样式设置 -------*/
+.profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-color: white; /* 设置背景颜色，可以根据需要修改 */
+    object-fit: cover; /* 保持图像比例，覆盖整个容器 */
+    position: relative;
+    top: -150px; /* 负边距值根据需要调整，使头像在中央上方 */
+}
+
+
+
+/* ------------句子容器设置 -------*/
+.sentence-container {
+    margin-top: 20px; /* 调整句子容器的上边距 */
+    position: relative;
+    width: 100%;
+}
+
+.sentence {
+    font-size: 18px;
+    color: pink;
+    opacity: 0; /* 初始时句子透明 */
+    position: absolute;
+    top: -100px; /* 确保垂直居中 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 居中显示 */
+    animation: changeSentence 20s linear infinite;
+    white-space: pre-wrap; /* 添加这行样式 */
+}
+
+
+.sentence:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.sentence:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.sentence:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.sentence:nth-child(4) {
+    animation-delay: 15s;
+}
+
+@keyframes changeSentence {
+    0%, 100% {
+        opacity: 0;
+    }
+    4.5%, 16.5% {
+        opacity: 1;
+    }
+    20%, 100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* ------------文字链接容器设置 ----*/
+
+/* ------------按钮样式 ----*/
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: aqua;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+button:hover {
+    color: pink;
+    position: relative;
+}
+
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    white-space: pre-wrap; 
+}
+
+.aone{
+    text-decoration: none;
+    color: aqua;
+}
+
+.aone:hover{
+    color: pink;
+    position: relative;
+}
+
+/* ----------------------------------第一主页的页面结束--------------- */
+
+
+
+/* ----------------------------------第二主页的页面开始--------------- */
+#mainContent {
+    display: none;
+    height: 100vh;
+    position: fixed; /* 将 position 修改为 fixed，使其相对于视口固定 */
+    top: 0; /* 顶部距离为 0 */
+    z-index: 999; /* 设置一个较高的 z-index，确保它在顶部 */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+}
+
+/* ------------------左侧模块-------------------------- */
+/* 左侧模块样式，背景是一张照片 */
+#leftModule {
+    flex: 1;
+    background-image: url('images/10.jpg'); /* 替换为实际图片路径 */
+    background-size:150% 150%; /* 增加宽度到150%，高度占满整个容器 */
+    background-position: top;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
+
+/* 头像 */
+.profile-image2 {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background-color: white; /* 设置背景颜色，可以根据需要修改 */
+    object-fit: cover; /* 保持图像比例，覆盖整个容器 */
+    position: relative;
+    top: 10px;
+}
+
+.sentence-container2 {
+    margin-top: 60px; /* 调整句子容器的上边距 */
+    position: relative;
+    width: 100%;
+}
+
+.sentence2 {
+    font-size: 18px;
+    color: orange;
+    opacity: 0; /* 初始时句子透明 */
+    position: absolute;
+    top: -30px; /* 确保垂直居中 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 居中显示 */
+    animation: changeSentence2 20s linear infinite;
+    white-space: pre-wrap; /* 添加这行样式 */
+}
+
+
+.sentence2:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.sentence2:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.sentence2:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.sentence2:nth-child(4) {
+    animation-delay: 15s;
+}
+
+@keyframes changeSentence2 {
+    0%, 100% {
+        opacity: 0;
+    }
+    4.5%, 16.5% {
+        opacity: 1;
+    }
+    20%, 100% {
+        opacity: 0;
+    }
+}
+
+.links2 {
+    display:flex;
+    flex-direction: column; /* 设置为纵向排列 */
+    align-items: center; /* 横向居中对齐 */
+    white-space: pre-wrap; 
+    margin-left: -120px; /* 调整 links2 整体向左的距离 */
+}
+
+.links2 div {
+    margin-bottom: 5px; /* 调整链接之间的垂直间距 */
+}
+
+.atwo{
+    text-decoration: none;
+    color: aqua;
+}
+
+.atwo:hover{
+    color: pink;
+}
+
+#leftModule p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* -------------------右侧模块---------------------- */
+/* 右侧模块样式，显示每行每条类型的文字 */
+#rightModule {
+    flex: 2; /* 调整宽度，以确保合并占满整个容器的宽度 */
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 520    px; */
+    position: relative;
+}
+
+/* 右侧模块样式，显示每行每条类型的文字 */
+#rightModule {
+    /* 其他样式 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    position: relative;
+}
+
+/* 右侧模块内部内容样式 */
+#rightModuleContent {
+    overflow-y: auto;
+    max-height: 100vh; /* 设置最大高度，超过部分将隐藏 */
+}
+
+/* 右侧模块样式，显示每行每条类型的文字 */
+#rightModule {
+    /* 其他样式 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    position: relative;
+}
+
+/* 右侧模块内部内容样式 */
+#rightModuleContent {
+    overflow-y: auto;
+    max-height: 100vh; /* 设置最大高度，超过部分将隐藏 */
+}
+
+/* ---------------文段个人介绍--------- */
+#rightModule p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.marquee-container {
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    left: 400px;
+   }
+   
+.marquee-content {
+display: inline-block;
+padding-right: 100%;
+animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+0% {
+    transform: translateX(0%);
+}
+100% {
+    transform: translateX(-100%);
+}
+}
+   
+
+/* ----关于我---- */
+#rightModule .p1 {
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: center; /* 文段水平居中 */
+    position:absolute;    
+    top: 30px;
+    left: 300px;
+}
+
+#rightModule .p2 {
+    width: 800px;
+    height: 40px;
+    background-color: rgb(131, 210, 248);
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    white-space: pre-wrap; 
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 100px;
+    left: 460px;
+}
+
+#rightModule .p3 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 162px;
+    left: 490px;
+}
+
+#rightModule .p4 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 202px;
+    left: 490px;
+}
+
+#rightModule .p5 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 242px;
+    left: 490px;
+}
+
+#rightModule .p6 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 282px;
+    left: 490px;
+}
+
+#rightModule .p7 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 322px;
+    left: 490px;
+}
+#rightModule .p8 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 362px;
+    left: 490px;
+}
+
+/* ----喜欢语录---- */
+
+#rightModule .p9 {
+    width: 800px;
+    height: 40px;
+    background-color: rgb(131, 210, 248);
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    white-space: pre-wrap; 
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 422px;
+    left: 460px;
+}
+
+#rightModule .p10 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 484px;
+    left: 490px;
+}
+
+#rightModule .p11 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 524px;
+    left: 490px;
+}
+
+#rightModule .p12 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 564px;
+    left: 490px;
+}
+
+#rightModule .p13 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 604px;
+    left: 490px;
+}
+
+#rightModule .p14 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 644px;
+    left: 490px;
+}
+
+#rightModule .p15 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 684px;
+    left: 490px;
+}
+
+#rightModule .p16 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 724px;
+    left: 490px;
+}
+
+/* ----与我交流---- */
+
+#rightModule .p17 {
+    width: 800px;
+    height: 40px;
+    background-color: rgb(131, 210, 248);
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    white-space: pre-wrap; 
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 786px;
+    left: 460px;
+}
+
+#rightModule .p18 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 848px;
+    left: 490px;
+}
+
+#rightModule .p19 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 888px;
+    left: 490px;
+}
+
+#rightModule .p20 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 928px;
+    left: 490px;
+}
+#rightModule .p21 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 968px;
+    left: 490px;
+}
+#rightModule .p22 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 1008px;
+    left: 490px;
+}
+#rightModule .p23 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 1048px;
+    left: 490px;
+}
+#rightModule .p24 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 1088px;
+    left: 490px;
+}
+#rightModule .p25 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left; /* 文段水平居中 */
+    position:absolute;    
+    top: 1128px;
+    left: 490px;
+}
+
+
+a{
+    color:#387692;
+    transition: color 0.3s ease; /* 添加过渡效果 */
+}
+
+a:hover{
+    color: #946594;
+}
+/* -------------视频内嵌块----------- */
+.video-container {
+    margin-top: 1300px; /* 调整视频容器与上方文段的间距 */
+    margin-left: 500px;
+}
+
+/* ----------------------------------第二主页的页面结束--------------- */
