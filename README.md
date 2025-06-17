@@ -23,4 +23,4 @@
 
 ## License
 
-Apache License 2.0
+CC BY-NC 4.0  ---updated
